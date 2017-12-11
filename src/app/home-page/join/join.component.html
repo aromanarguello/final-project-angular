@@ -1,0 +1,44 @@
+<div class="main-container">
+  <!-- <div class="join-header-container">
+    <h2 class="grill-corn-text"> Sign Up</h2>
+
+  </div> -->
+    <!-- <hr /> -->
+    <div class="middle-container">
+
+
+    <div class="left-container">
+      <div class="join-form-container">
+        <form (ngSubmit)="startSignupAjax()">
+          <label for="firstName-input"> First name:</label>
+          <br />
+          <input type="text" id="firstName-input"  value="" placeholder="e.g. John"
+          [(ngModel)]="theUser.firstName" name="firstName">
+          <br />
+          <label for="lastName-input"> Last Name:</label>
+          <br />
+          <input type="text" id="lastName-input" value="" placeholder="e.g. Smith"
+          [(ngModel)]="theUser.lastName" name="lastName">
+          <br />
+          <label for="email-input"> Email: </label>
+          <br />
+          <input type="text" id="email-input"  value="" placeholder="e.g. johnsmith@gmail.com"
+            [(ngModel)]="theUser.email" name="email">
+          <br />
+          <label for="password-input"> Password: </label>
+          <br />
+          <input type="text" id="password-input" name="password" value="" placeholder="***********"
+            [(ngModel)]="theUser.password" name="password">
+          <br />
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="right-container">
+      <img src="https://images.unsplash.com/photo-1511909525232-61113c912358?auto=format&fit=crop&w=2000&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="">
+    </div>
+  </div>
+
+</div>
+<footer>

@@ -15,6 +15,8 @@ import { RecipesPageComponent } from './recipes-page/recipes-page.component';
 import { SurveyComponent } from './profile/survey/survey.component';
 import { ResultsPageComponent } from './profile/results-page/results-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { JoinComponent } from './home-page/join/join.component';
+import { LoginComponent } from './home-page/login/login.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RecipesPageComponent,
     SurveyComponent,
     ResultsPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    JoinComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UserApiService,
+    RecipeApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

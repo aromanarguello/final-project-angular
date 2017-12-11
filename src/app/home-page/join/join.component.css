@@ -1,0 +1,100 @@
+.main-container {
+  font-family: "Avenir";
+  overflow: auto;
+
+}
+
+h2 {
+  font-weight: 200;
+  margin: 20px 50px 0 0;
+  font-size: 50px;
+}
+
+.join-header-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+
+.middle-container {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.left-container {
+  width: 40%;
+  height: 600px;
+}
+
+.right-container {
+  width: 55%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+img {
+  width: 750px;
+  height: 550px;
+  margin: 0 0 0 45px;
+}
+
+.join-form-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+label {
+  font-size: 22px;
+
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #68D8D6;
+  background-color: transparent;
+  width: 250px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #68D8D6;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  margin: 10px 0 0 8px;
+  align-self: flex-start;
+
+}
+button {
+  box-shadow: 0.5px 0.5px 0.5px rgba(106, 106, 106, 0.7);
+}
+
+button:hover {
+  background-color: rgba(103, 215, 213, 0.8);
+}
+
+.grill-corn-text {
+  color: #68D8D6;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #C8E9A0;
+}

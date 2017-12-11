@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment'
 export class User {
   // signup form
   firstName: string;
+  lastName:  string;
   // signup & login forms
   email:     string;
   password:  string;
@@ -19,14 +20,14 @@ export class User {
 @Injectable()
 export class UserApiService {
 
-  currentUser = User;
+  currentUser: User;
 
   constructor(private httpThing: HttpClient) { }
 
   // Post /api/sginup
   postSignup(userInfo: User) {
   return this.httpThing.post(
-    `${environment.backendUrl}/api/signup`,
+    `${environment.backendUrl}/api/join`,
     userInfo // comes from the Component
   ).toPromise()
     .then( (apiResults: any ) => {

@@ -37,13 +37,14 @@
 }
 
 .home-image-container{
-  width: 49%;
-  margin: 0 0 0 10px;
+  width: 670px;
+  height: auto;
+  margin: 0 20px 0 10px;
 }
 
 .smoothie-img {
   display: inline-block;
-  width: 100%;
+  width: 650px;
   height: auto;
   margin: 0 0 0 10px;
   overflow: hidden;
@@ -58,8 +59,8 @@
 
 .smoothie-img:hover {
   opacity: 1;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .home-side-text {
@@ -107,10 +108,14 @@
   box-shadow: 0.5px 0.5px 0.5px rgba(106, 106, 106, 0.7);
 }
 
-.side-bottom-btn button:hover,
-.side-bottom-btn i:hover{
-  background-color: #F4F8F0;
-  color: #68D8D6;
+.side-bottom-btn button:hover {
+  background-color: rgba(103, 215, 213, 0.8);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
 }
 
 .side-bottom-button div {
@@ -134,7 +139,7 @@
 
 hr {
   width: 10%;
-  border: 1px solid #68D8D6;
+  border: 1px solid rgb(103, 215, 213);
 }
 
 .features-container  {
@@ -165,5 +170,5 @@ hr {
 }
 
 h3 {
-  font-weight: 2s00;
+  font-weight: 200;
 }

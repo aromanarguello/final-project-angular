@@ -12,9 +12,10 @@
 
           <div class="nav-link-container">
             <ul>
-              <li> About</li>
+              <li *ngIf="userThing.currentUser" routerLink="/logout"> Log out</li>
+              <li> About |</li>
               <li> Your Suggestions | </li>
-              <li> Profile  | </li>
+              <li *ngIf="userThing.currentUser" routerLink="/profile"> Profile  | </li>
               <li><a routerLink="/"> Home  |</a></li>
 
             </ul>

@@ -43,17 +43,31 @@
 
 .smoothie-img {
   display: inline-block;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: auto;
   margin: 0 0 0 10px;
+  overflow: hidden;
+  background-color: #000;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
 
+.smoothie-img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .home-side-text {
   width: 46%;
-  height: 600px;
+  height: auto;
   color: #4B4b4C;
   font-weight: 400;
+  margin-left: 10px;
 }
 
 .top-side-stars i {
@@ -62,8 +76,9 @@
 }
 
 .description-container {
-  width: 60%;
-  margin: 0 0 0 20px;
+  width: 90%;
+  margin: 0 0 0 0;
+  display: inline-block;
 }
 
 .side-bottom-btn {
@@ -84,9 +99,23 @@
   font-size: 16px;
   text-align: center;
   border: 0;
-  margin-left: 15px;
-  align-self: center;
+  margin: 10px 0 0 8px;
+  align-self: flex-start;
 
+}
+.side-bottom-btn button {
+  box-shadow: 0.5px 0.5px 0.5px rgba(106, 106, 106, 0.7);
+}
+
+.side-bottom-btn button:hover,
+.side-bottom-btn i:hover{
+  background-color: #F4F8F0;
+  color: #68D8D6;
+}
+
+.side-bottom-button div {
+  font-family: "Avenir";
+  text-decoration: none
 }
 
 .side-bottom-btn i {
@@ -94,4 +123,47 @@
   color: white;
   font-size: 25px;
   text-align: center;
+}
+
+#features h2 {
+  text-align: center;
+  font-size: 62px;
+  margin: 0 0 0 0;
+  font-weight: 300;
+}
+
+hr {
+  width: 10%;
+  border: 1px solid #68D8D6;
+}
+
+.features-container  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.features-wrap {
+  margin: 30px 0 0 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.features-box {
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.features-icon {
+  font-size: 80px;
+  color: #68D8D6;
+}
+
+h3 {
+  font-weight: 2s00;
 }

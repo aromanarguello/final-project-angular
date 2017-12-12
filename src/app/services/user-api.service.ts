@@ -29,7 +29,9 @@ export class UserApiService {
   postSignup(userInfo: User) {
   return this.httpThing.post(
     `${environment.backendUrl}/api/join`,
-    userInfo // comes from the Component
+    userInfo,
+    // send the cookies even to a different domain
+    { withCredentials: true }
   ).toPromise()
     .then( (apiResults: any ) => {
       this.currentUser = apiResults.userInfo;
@@ -38,17 +40,48 @@ export class UserApiService {
 }
 
 // POST api/LoginComponent
-postLogin(userInfo: User) {
-return this.httpThing.post(
-`${environment.backendUrl}/api/login`,
-userInfo
-)
-.toPromise()
-.then( (apiResults: any) => {
-  this.currentUser = apiResults.userInfo;
-  return apiResults;
-})
+  postLogin(userInfo: User) {
+  return this.httpThing.post(
+  `${environment.backendUrl}/api/login`,
+  userInfo,
+  // send the cookies even to a different domain
+  { withCredentials: true }
+  )
+  .toPromise()
+  .then( (apiResults: any) => {
+    this.currentUser = apiResults.userInfo;
+    return apiResults;
+  })
+  }
+
+  // DELETE/api/logout
+  logout(){
+    return this.httpThing.delete(
+    `${environment.backendUrl}/api/logout`,
+        { withCredentials: true }
+      )
+      .toPromise()
+      .then( apiResults => {
+        // update 'currentUser' since we are logged OUT
+        this.currentUser = null;
+        // return 'apiResults' for the component
+        return apiResults;
+      });
 }
 
+//GET /checklogin
+  getCheckLogin() {
+  return this.httpThing.get(
+    `${environment.backendUrl}/api/checklogin`,
+    { withCredentials: true }
+  )
+  .toPromise()
+  .then( (apiResults: any) => {
+    // update "currentUser" in case we are logged in
+    this.currentUser = apiResults.userInfo;
+    // return "apiResults" for the component
+    return apiResults;
+  })
+}
 
 }

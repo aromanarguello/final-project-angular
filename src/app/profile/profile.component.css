@@ -1,0 +1,25 @@
+.middle-container {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Avenir"
+}
+
+.left-container {
+  border: 1px solid;
+  width: 40%;
+  height: auto;
+  margin: 0 0 0 10px;
+}
+
+.right-container {
+  border: 1px solid;
+  width: 58%;
+  height: auto;
+}
+
+.user-profile-info {
+  font-weight: 100;
+  width: 300px;
+  display: inline-block;
+}

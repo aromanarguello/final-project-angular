@@ -1,3 +1,21 @@
-<p *ngIf="userThang.currentUser">
-  hello, <b> {{ userThang.currentUser.username}}</b>
+<p>
+  hello, <b> {{ userThing.currentUser.firstName }}</b>
 </p>
+
+<div class="main-container">
+
+  <div class="middle-container">
+
+
+    <div class="left-container">
+    <h2> Welcome, <div class="user-profile-info">{{ userThing.currentUser.firstName }} {{ userThing.currentUser.lastName }}</div></h2>
+    <ul>
+      <li></li>
+    </ul>
+    </div> <!-- left container -->
+
+    <div class="right-container">
+      
+    </div> <!-- right container -->
+  </div> <!-- middle container -->
+</div>

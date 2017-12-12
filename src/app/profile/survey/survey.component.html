@@ -1,3 +1,35 @@
-<p>
-  survey works!
-</p>
+<form (ngSubmit)="surveyAjax()">
+  <label for="height-input"> Height: </label>
+  <input type="number" id="height-input" name="height" value=""
+  [(ngModel)]="theSurvey.height"  placeholder="e.g. 164 cm">
+  <br />
+  <label for="weight-input"> Weight: </label>
+  <input type="number" id="weight-input" name="weight" value=""
+  [(ngModel)]="theSurvey.weight" placeholder="e.g. 130kg">
+  <br />
+  <label for="age-input"> Age: </label>
+  <input type="number" id="age-input" name="age" value=""
+  [(ngModel)]="theSurvey.age" placeholder="e.g. 27">
+  <br />
+  <label for="peanut-input"> Peanuts? </label>
+  <input type="checkbox" id="peanut-input" name="peanuts" value=""
+  [(ngModel)]="theSurvey.peanuts">
+  <br />
+  <label for="lactose-input"> Lactose? </label>
+  <input type="checkbox" id="lactose-input" name="lactose" value=""
+  [(ngModel)]="theSurvey.lactose">
+  <br />
+  <label for="energy-one-input"> Sedentary </label>
+  <input type="checkbox" id="energy-one-input" name="energyOne" value=""
+  [(ngModel)]="theSurvey.energyOne">
+  <br />
+  <label for="energy-two-input"> Moderately Active </label>
+  <input type="checkbox" id="energy-two-input" name="energyTwo" value=""
+  [(ngModel)]="theSurvey.energyTwo">
+  <br />
+  <label for="energy-three-input"> Active </label>
+  <input type="checkbox" id="energy-three-input" name="energyThree" value=""
+  [(ngModel)]="theSurvey.energyTwo">
+  <br />
+  <button>Submit</button>
+</form>

@@ -1,17 +1,15 @@
-<p>
+<!-- <p>
   hello, <b> {{ userThing.currentUser.firstName }}</b>
-</p>
+</p> -->
 
 <div class="main-container">
 
-  <div class="middle-container">
-
+  <div class="middle-container" *ngIf="userThing.currentUser">
 
     <div class="left-container">
-    <h2> Welcome, <div class="user-profile-info">{{ userThing.currentUser.firstName }} {{ userThing.currentUser.lastName }}</div></h2>
-    <ul>
-      <li></li>
-    </ul>
+      <h2> Welcome, <div class="user-profile-info">{{ userThing.currentUser.firstName }} {{ userThing.currentUser.lastName }}</div></h2>
+      <button (click)="getLastAjaxResults()" *ngIf="currentUser"> Last Results</button>
+      <app-results-page></app-results-page>
     </div> <!-- left container -->
 
     <div class="right-container">

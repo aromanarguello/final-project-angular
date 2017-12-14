@@ -17,6 +17,7 @@ import { ResultsPageComponent } from './profile/results-page/results-page.compon
 import { NotFoundComponent } from './not-found/not-found.component';
 import { JoinComponent } from './home-page/join/join.component';
 import { LoginComponent } from './home-page/login/login.component';
+import { SuggestionsPageComponent } from './suggestions-page/suggestions-page.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { LoginComponent } from './home-page/login/login.component';
     ResultsPageComponent,
     NotFoundComponent,
     JoinComponent,
-    LoginComponent
+    LoginComponent,
+    SuggestionsPageComponent
   ],
   imports: [
     BrowserModule,

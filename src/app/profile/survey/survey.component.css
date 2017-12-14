@@ -1,0 +1,68 @@
+#survey-form {
+  text-align: center;
+  margin: 0 0 0 30px;
+}
+
+.survey-main-container {
+  background-image: url('../../../assets/images/kiwi-water.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+label {
+  font-size: 22px;
+
+}
+
+#height-input,
+#weight-input,
+#age-input {
+  border: 0;
+  border-bottom: 3px solid #68D8D6;
+  background-color: transparent;
+  width: 250px;
+  height: 40px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#checkbox-input {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #68D8D6;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  margin: 10px 0 0 8px;
+  align-self: flex-start;
+
+}
+button {
+  box-shadow: 0.5px 0.5px 0.5px rgba(106, 106, 106, 0.7);
+}
+
+button:hover {
+  background-color: rgba(103, 215, 213, 0.8);
+}
+
+.peanut-input,
+.lactose-input,
+.energy-one-input,
+.energy-two-input,
+.energy-three-input {
+
+}

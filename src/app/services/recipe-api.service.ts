@@ -34,5 +34,15 @@ export class RecipeApiService {
     })
   }
 
+  getLastSurveyInfo(surveyId: string){
+    return this.httpThing.get(
+      `${environment.backendUrl}/api/survey/${surveyId}`,
+      { withCredentials: true }
+    ).toPromise();
+  }
+
+  // get survey info to make the calculation => display on results page on the side... perhaps?
+  
+
 
 }

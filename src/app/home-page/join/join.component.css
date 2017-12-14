@@ -36,11 +36,14 @@ h2 {
   display: flex;
   align-items: center;
   margin-right: 20px;
+  background-image: url('../../../assets/images/acai.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 img {
-  width: 750px;
-  height: 550px;
+  width: 100%;
+  height: 100%;
   margin: 0 0 0 45px;
 }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeApiService, Survey } from '../../services/recipe-api.service';
 
 @Component({
@@ -12,8 +12,9 @@ export class SurveyComponent implements OnInit {
  theSurvey = new Survey();
 
   constructor(
-    private routerThing: Router,
-    private recipeThing: RecipeApiService
+    private activatedThing: ActivatedRoute,
+    private routerThing:    Router,
+    private recipeThing:    RecipeApiService
   ) { }
 
   ngOnInit() {
@@ -22,13 +23,14 @@ export class SurveyComponent implements OnInit {
   surveyAjax(){
     this.recipeThing.postSurvey(this.theSurvey)
     .then( () => {
-      this.routerThing.navigate(['/profile'])
+      this.routerThing.navigate(['/suggestions'])
     })
     .catch( err => {
-      alert("Sorry something went wrong");
+      // alert("Sorry something went wrong");
       console.log("Signup Error")
       console.log(err)
     })
   }
+
 
 }

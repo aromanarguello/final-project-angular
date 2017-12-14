@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     this.userThing.getCheckLogin()
     // no ".then()" because "getCheckLogin" already has the ".then()" that we need
     .catch (() => {
-      alert("Sorry! Something went wrong")
+      // alert("Sorry! Something went wrong")
   })
   }
 

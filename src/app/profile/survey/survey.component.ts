@@ -23,12 +23,13 @@ export class SurveyComponent implements OnInit {
   surveyAjax(){
     this.recipeThing.postSurvey(this.theSurvey)
     .then( () => {
+      console.log(this.theSurvey)
       this.routerThing.navigate(['/suggestions'])
     })
     .catch( err => {
       // alert("Sorry something went wrong");
-      console.log("Signup Error")
-      console.log(err)
+      console.log("Survey Error")
+      console.log(err);
     })
   }
 

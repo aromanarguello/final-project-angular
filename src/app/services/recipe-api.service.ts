@@ -13,6 +13,7 @@ export class Survey {
   energyOne:   number;
   energyTwo:   number;
   energyThree: number;
+  owner:       string;
 }
 
 @Injectable()
@@ -23,26 +24,31 @@ export class RecipeApiService {
   constructor(private httpThing: HttpClient) { }
 
   postSurvey(surveyInfo: Survey){
+    console.log(surveyInfo)
+
     return this.httpThing.post(
       `${environment.backendUrl}/api/survey`,
-      surveyInfo
+      surveyInfo,
+      { withCredentials: true }
     )
     .toPromise()
     .then((apiResults: any) => {
       this.currentSurvey = apiResults.surveyInfo;
+      console.log(this.currentSurvey)
       return apiResults;
     })
   }
 
-  getLastSurveyInfo(surveyId: string){
+  getResults() {
     return this.httpThing.get(
-      `${environment.backendUrl}/api/survey/${surveyId}`,
-      { withCredentials: true }
-    ).toPromise();
+      `${environment.backendUrl}/api/results`,
+      { withCredentials: true })
+    .toPromise();
   }
 
+
   // get survey info to make the calculation => display on results page on the side... perhaps?
-  
+
 
 
 }

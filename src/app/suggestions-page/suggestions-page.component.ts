@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeApiService, Survey }  from '../services/recipe-api.service';
+import { ActivatedRoute, Router }    from '@angular/router';
 
 @Component({
   selector: 'app-suggestions-page',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuggestionsPageComponent implements OnInit {
 
-  constructor() { }
+ results: Survey[] = [];
+
+  constructor(
+    private activatedThing: ActivatedRoute,
+    private routerThing:    Router,
+    private recipeThing:    RecipeApiService
+  ) { }
 
   ngOnInit() {
+    this.recipeThing.getResults()
+      .then( (surveyResults: Survey[]) =>{
+        this.results = surveyResults;
+      })
+      .catch( err => {
+      alert('Sorry! Something went wrong.')
+      console.log( err )
+    });
   }
 
 }

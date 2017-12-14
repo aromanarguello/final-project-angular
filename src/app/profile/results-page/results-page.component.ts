@@ -18,23 +18,19 @@ export class ResultsPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.activatedThing.params.subscribe( (myReqParams) => {
-      console.log(myReqParams.surveyId);
-
-      this.getLastAjaxResults(myReqParams.surveyId);
-    });
+  
   }
 
-  getLastAjaxResults(urlId){
-    this.recipeThing.getLastSurveyInfo(urlId)
-    .then( (surveyResults: Survey) => {
-      console.log(surveyResults)
-      this.theResults  = surveyResults;
-    })
-    .catch( err => {
-      console.log( err );
-      console.log("Last survey result error");
-    })
-  }
+  // getLastAjaxResults(urlId){
+  //   this.recipeThing.getLastSurveyInfo(urlId)
+  //   .then( (surveyResults: Survey) => {
+  //     console.log(surveyResults)
+  //     this.theResults  = surveyResults;
+  //   })
+  //   .catch( err => {
+  //     console.log( err );
+  //     console.log("Last survey result error");
+  //   })
+  // }
 
 }

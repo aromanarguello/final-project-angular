@@ -1,19 +1,21 @@
-<ul>
-  <li *ngFor="let oneResult of results" class="results-list">
-    <p>
-      <b>Your height (cm):</b>
-      <br />
-      {{ oneResult.height }}
-    </p>
-    <p>
-      <b>Your weight (kg):</b>
-      <br />
-      {{ oneResult.weight }}
-    </p>
-    <p>
-      <b>Your age:</b>
-      <br />
-      {{ oneResult.age }} years
-    </p>
-  </li>
-</ul>
+<div class="suggestions-container">
+  <ul>
+    <li *ngFor="let oneResult of results" class="results-list">
+      <p>
+        <b>Your height (cm):</b>
+        <br />
+        {{ oneResult.height }}
+      </p>
+      <p>
+        <b>Your weight (kg):</b>
+        <br />
+        {{ oneResult.weight }}
+      </p>
+      <p>
+        <b>Your age:</b>
+        <br />
+        {{ oneResult.age }} years
+      </p>
+    </li>
+  </ul>
+</div>

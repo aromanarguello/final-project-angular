@@ -23,7 +23,7 @@ export class UserApiService {
 
   currentUser: User;
 
-  constructor(private httpThing: HttpClient) { }
+  constructor(public httpThing: HttpClient) { }
 
   // Post /api/sginup
   postSignup(userInfo: User) {

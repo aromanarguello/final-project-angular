@@ -18,7 +18,7 @@
     <div id="checkbox-input">
       <label for="peanut-input"> Peanuts? </label>
       <input type="checkbox" id="peanut-input" name="peanuts" value=""
-      [(ngModel)]="theSurvey.peanuts">
+      [(ngModel)]="theSurvey.peanut">
       <br />
       <label for="lactose-input"> Lactose? </label>
       <input type="checkbox" id="lactose-input" name="lactose" value=""
@@ -38,6 +38,15 @@
       [(ngModel)]="theSurvey.energyThree">
     </div>
     <br />
+    <div id="gender-cb-input">
+      <label for="male-input">Male:</label>
+      <input type="checkbox" id="male-input" name="maleInput" value=""
+      [(ngModel)]="theSurvey.male">
+      <br />
+      <label for="female-input">Female:</label>
+      <input type="checkbox" id="female-input" name="femaleInput" value=""
+      [(ngModel)]="theSurvey.female">
+    </div>
     <button>Submit</button>
   </form>
 </div>

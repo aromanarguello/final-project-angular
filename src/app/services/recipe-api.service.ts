@@ -10,6 +10,8 @@ export class Survey {
   age:         number;
   peanut:      boolean;
   lactose:     boolean;
+  male:        boolean;
+  female:      boolean;
   energyOne:   number;
   energyTwo:   number;
   energyThree: number;

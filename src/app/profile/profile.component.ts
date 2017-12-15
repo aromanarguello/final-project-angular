@@ -10,7 +10,7 @@ import { RecipeApiService } from '../services/recipe-api.service';
 export class ProfileComponent implements OnInit {
 
 
-  constructor( private userThing: UserApiService ) { }
+  constructor( public userThing: UserApiService ) { }
 
   ngOnInit() {
   }

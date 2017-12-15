@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   constructor (
-    private userThing:   UserApiService,
+    public userThing:   UserApiService,
     private routerThing: Router
   ) { }
 

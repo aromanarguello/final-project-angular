@@ -21,6 +21,13 @@ export class SuggestionsPageComponent implements OnInit {
     this.recipeThing.getResults()
       .then( (surveyResults: Survey[]) =>{
         this.results = surveyResults;
+        console.log(this.results)
+        this.results.forEach( oneResult => {
+          const age    = oneResult.age;
+          const height = oneResult.height;
+          const weight = oneResult.weight;
+          console.log(66.5 +(13.75 * weight) + (5..03 * height) - (6.755 * age));
+        })
       })
       .catch( err => {
       alert('Sorry! Something went wrong.')

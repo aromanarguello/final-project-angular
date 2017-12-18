@@ -18,6 +18,16 @@ export class Survey {
   owner:       string;
 }
 
+export class Recipes {
+  name:        string;
+  calories:    number;
+  url:         string;
+  img:         string;
+  description: string;
+  peanut:      boolean;
+  lactose:     boolean;
+}
+
 @Injectable()
 export class RecipeApiService {
 
@@ -46,6 +56,13 @@ export class RecipeApiService {
       `${environment.backendUrl}/api/results`,
       { withCredentials: true })
     .toPromise();
+  }
+
+  getRecipes() {
+    return this.httpThing.get(
+      `${environment.backendUrl}/api/recipes`,
+      { withCredentials: true } )
+      .toPromise()
   }
 
 

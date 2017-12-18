@@ -20,6 +20,7 @@ import { LoginComponent } from './home-page/login/login.component';
 import { SuggestionsPageComponent } from './suggestions-page/suggestions-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { SuggestionsPageComponent } from './suggestions-page/suggestions-page.co
     NotFoundComponent,
     JoinComponent,
     LoginComponent,
-    SuggestionsPageComponent
+    SuggestionsPageComponent,
   ],
   imports: [
     BrowserModule,

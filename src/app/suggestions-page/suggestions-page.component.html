@@ -16,10 +16,23 @@
         <br />
         {{ oneResult.age }} years
       </p>
+
+    </li>
+
+    <li *ngFor="let oneRes of resultArray">
+      <p>
+        {{ oneRes }} Calories
+      </p>
     </li>
   </ul>
 </div>
 
-<p>
-  {{ maleCalc}}
-</p>
+<div class="recipes-container">
+  <div class="recipes-list-container">
+    <ul>
+      <li *ngFor="let oneRecipe of recipes" class="recipes-list">
+        <img [src]="oneRecipe.img" alt="" class="meal-photo">
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,29 +1,47 @@
+.main-page-container {
+  background-color: #F4F8F0;
+}
+
 .suggestions-container {
   width: 50%;
   height: 100vh;
   float: left;
-  background-image: url('../../assets/images/salad-white.jpg');
+  /* background-image: url('../../assets/images/salad-white.jpg'); */
   background-position: center;
   margin: 0;
   padding: 0;
+  overflow: auto;
+  display: flex;
 }
 
 ul {
   width: 100%;
   height: inherit;
   display: flex;
-  align-items: center;
-  margin: 0 0 0 0;
+  margin: 0 auto;
+  padding: 0;
+  align-items: flex-start;
+}
+
+.results-list-container {
+  display: flex;
+  height: inherit;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 li {
   list-style: none;
   text-align: center;
-
+  width: 100%;
 }
 
 p {
   font-size: 23px;
+  color: black;
+  width: 100%;
 }
 
 .recipes-container {
@@ -48,11 +66,8 @@ p {
 
 .recipes-list {
   width: 50%;
-  flex-shrink: 0;
   margin: 0;
   display: block;
-    float: left;
-  /* float: left; */
 }
 
 .meal-photo {
@@ -61,13 +76,22 @@ p {
   background-color: #000;
 }
 
+.results-list {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+
 .recipes-list img {
-  width: 90%;
+  width: 95%;
   height: auto;
-  margin: 10px 0 0 0;
-  opacity: 0.5;
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 0.5s;
@@ -75,7 +99,24 @@ p {
 }
 
 .recipes-list img:hover {
+  content: "ADD";
   opacity: 1;
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.calorie-req-text {
+  align-self: flex-start;
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  /* padding: 0 0 30px 50px; */
+}
+
+.calorie-req-text p {
+  margin: 0 0 0 0;
+  font-size: 30px;
+  color: black;
+  font-weight: 400;
 }

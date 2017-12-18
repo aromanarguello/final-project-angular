@@ -1,5 +1,6 @@
+<div class="main-page-container">
 <div class="suggestions-container">
-  <ul>
+  <ul class="results-list-container">
     <li *ngFor="let oneResult of results" class="results-list">
       <p>
         <b>Your height (cm):</b>
@@ -19,9 +20,10 @@
 
     </li>
 
-    <li *ngFor="let oneRes of resultArray">
+    <li *ngFor="let oneRes of resultArray" class="calorie-req-text">
       <p>
-        {{ oneRes }} Calories
+        Based on our calculations, <br />you should be eating:
+        <br />{{ oneRes }} Calories/Day
       </p>
     </li>
   </ul>
@@ -31,8 +33,14 @@
   <div class="recipes-list-container">
     <ul>
       <li *ngFor="let oneRecipe of recipes" class="recipes-list">
-        <img [src]="oneRecipe.img" alt="" class="meal-photo">
+        <a href="{{oneRecipe.recipeUrl}}">
+          <img
+          [src]="oneRecipe.img"
+          class="meal-photo"
+          title="{{oneRecipe.name}}/{{oneRecipe.calories}} Cal." />
+        </a>
       </li>
     </ul>
   </div>
+</div>
 </div>

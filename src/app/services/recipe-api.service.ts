@@ -66,7 +66,7 @@ export class RecipeApiService {
   }
 
 
-  // get survey info to make the calculation => display on results page on the side... perhaps?
+  
 
 
 

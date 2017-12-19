@@ -9,6 +9,7 @@ import { ResultsPageComponent } from './profile/results-page/results-page.compon
 import { JoinComponent } from './home-page/join/join.component';
 import { LoginComponent } from './home-page/login/login.component';
 import { SuggestionsPageComponent} from './suggestions-page/suggestions-page.component';
+import { AboutPageComponent} from './home-page/about-page/about-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
 { path: "",             component: HomePageComponent },
 { path: "join",         component: JoinComponent },
 { path: "login",        component: LoginComponent },
+{ path: "about",        component: AboutPageComponent },
 { path: "profile",      component: ProfileComponent },
 { path: "recipes",      component: RecipesPageComponent },
 { path: "survey",       component: SurveyComponent },

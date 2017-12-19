@@ -12,6 +12,7 @@
   padding: 0;
   overflow: auto;
   display: flex;
+  font-family: "Lato";
 }
 
 ul {

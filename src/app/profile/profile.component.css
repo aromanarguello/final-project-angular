@@ -3,13 +3,15 @@
   display: flex;
   justify-content: space-between;
   font-family: "Avenir";
-  height: 60vh;
+  height: 70vh;
 }
 
 .left-container {
   width: 42%;
   height: auto;
   margin: 0 0 0 0;
+  display: flex;
+  justify-content: center;
 }
 
 .right-container {

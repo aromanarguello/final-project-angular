@@ -28,6 +28,7 @@ export class SuggestionsPageComponent implements OnInit {
           const age                = oneResult.age;
           const height             = oneResult.height;
           const weight             = oneResult.weight;
+          const energyOne          = oneResult.energyOne;
           const ageConstantMale    = age    * 6.755;
           const ageConstantFem     = age    * 4.676;
           const weightConstantMale = weight * 13.75;
@@ -38,14 +39,41 @@ export class SuggestionsPageComponent implements OnInit {
 
           const maleCalc           = 66.5  + weightConstantMale + heightConstantMale - ageConstantMale;
           const femaleCalc         = 655.1 + weightConstantFem  + heightConstantFem  - ageConstantFem;
-
           if( oneResult.male === true ) {
-            console.log( maleCalc )
-            this.resultArray.push( Math.floor( maleCalc ) );
+            // console.log( maleCalc )
+            // this.resultArray.push( Math.floor( maleCalc ) );
+
+            if( oneResult.energyOne ) {
+              this.resultArray.push( Math.floor( maleCalc * 1.2 ))
+            }
+            else if( oneResult.energyTwo ) {
+              this.resultArray.push( Math.floor( maleCalc * 1.55 ))
+            }
+            else if( oneResult.energyThree ) {
+              this.resultArray.push( Math.floor( maleCalc * 1.725 ))
+            }
+            else {
+              this.resultArray.push( Math.floor( maleCalc ))
+            }
+
           }
+
           else if( oneResult.female === true ) {
-            console.log( femaleCalc )
-            this.resultArray.push( Math.floor( femaleCalc ) );
+            // console.log( femaleCalc )
+            // this.resultArray.push( Math.floor( femaleCalc ) );
+
+            if( oneResult.energyOne ) {
+              this.resultArray.push( Math.floor( femaleCalc * 1.2 ))
+            }
+            else if( oneResult.energyTwo ) {
+              this.resultArray.push( Math.floor( femaleCalc * 1.55 ))
+            }
+            else if( oneResult.energyThree ) {
+              this.resultArray.push( Math.floor( femaleCalc * 1.725 ))
+            }
+            else {
+              this.resultArray.push( Math.floor( femaleCalc ))
+            }
           }
         })
       })
